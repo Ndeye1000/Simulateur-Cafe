@@ -28,6 +28,6 @@ Projet créé dans le cadre de mon apprentissage du développement Python
 - Liste les fonctionnalités
 - Professionnel mais accessible
 
-Note :
+## Note :
 
 L'interface est pour bientôt !
