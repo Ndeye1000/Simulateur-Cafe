@@ -10,7 +10,6 @@ Ce programme permet de simuler une interaction dans un café où :
 - La serveuse confirme la préparation
 
 ## Comment utiliser
-```bash
 python cafe.py
 
 ## Fonctionnalités
