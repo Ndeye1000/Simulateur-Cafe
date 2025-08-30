@@ -20,7 +20,7 @@ python cafe.py
 - Messages de bienvenue chaleureux
 
 ## Technologies utilisées
-- Python 3.x
+- Python 3.13.2
 
 Projet créé dans le cadre de mon apprentissage du développement Python
 
