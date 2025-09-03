@@ -36,5 +36,7 @@ def menu_principal():
         print(f"Erreur inattendue : {e}")
 
 
+# Le programme démarre ici.
+
 if __name__ == '__main__':
     menu_principal()
