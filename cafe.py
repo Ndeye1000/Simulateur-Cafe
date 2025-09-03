@@ -1,32 +1,40 @@
 def client():
     """Cette fonction permet d'avoir une idée sur le client."""
-    genre = input(f'Que voit la serveuse ? ')
-    print(f'La serveuse voit un(e) {genre}\n')
-    if genre == 'dame':
-        nom_client = input(
-            f'Bonjour joli {genre}, comment vous appelez-vous ? ')
-        print(f'{nom_client}, bienvenue dans notre cafe.')
-    elif genre == 'monsieur':
-        nom_client = input(
-            f'Bonjour joli {genre}, comment vous appelez-vous ? ')
-        print(f'{nom_client}, bienvenue dans notre cafe.')
+    genre = input("La serveuse voit : ").strip().lower()
+
+    if genre in ["dame", "monsieur"]:
+        prenom = input(
+            f"Bonjour joli {genre}, comment vous appelez-vous ? ").strip()
+        if prenom:
+            print(f"{prenom}, bienvenue dans notre café.")
+            return True   # ✅ client valide
+        else:
+            print("Veuillez saisir un prénom.")
+            return False
     else:
-        print('Veuillez saisir dame ou monsieur, merci.')
+        print("Veuillez saisir 'dame' ou 'monsieur', merci.")
+        return False
 
 
 def commande():
     """Cette fonction permet au client de passer commande."""
-    commander = input(f'Que voulez-vous commander ?:')
-    print(f"Votre {commander} sera bientot pret.\n")
+    commander = input("Que voulez-vous commander ?: ").strip().lower()
+    if commander:
+        print(f"Votre {commander} sera bientôt prêt.\n")
+    else:
+        print("Veuillez saisir ce que vous voulez manger.")
 
 
 def menu_principal():
-    """Cette fonction permet d'utiliser les fonctions précédente en une seule fois."""
-    client()
-    commande()
+    """Cette fonction permet d'utiliser les fonctions précédentes en une seule fois."""
+    try:
+        if client():   # ✅ seulement si client() est valide
+            commande()
+    except ValueError:
+        print("Veuillez saisir des valeurs correctes.")
+    except Exception as e:
+        print(f"Erreur inattendue : {e}")
 
-# Le programme démarre ici.
 
 if __name__ == '__main__':
-    menu_principal()
     menu_principal()
