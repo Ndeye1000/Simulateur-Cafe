@@ -4,21 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
     <title>Document</title>
 </head>
 
 <body>
-    <h1>Café sourire</h1>
-    <p>Bonjour joli {{ genre }}, comment vous appelez-vous ?</p>
-    <p>Je m'appelle {{ prenom }}.</p>
-    <p>{{ prenom }}, bienvenue dans notre café. <br> Que voulez-vous commander ?</p>
-    <p>J'aimerais {{ commande }}</p>
-    <p>Votre {{ commande }} sera bientôt prêt.</p>
-    <hr>
-    <p>5 minutes plus tard</p>
-    <hr>
-    <p>Votre {{ commande }} est prête. Bon appétit.</p>
-    <p>Merci.</p>
+    <div class="container">
+        <h1>☕ Café sourire</h1>
+        <div class="dialogue">
+            <p>Bonjour joli <span class="highlight">{{ genre }}</span>, comment vous appelez-vous ?</p>
+            <p>Je m'appelle <span class="highlight">{{ prenom }}</span>.</p>
+            <p><span class="highlight">{{ prenom }}</span>, bienvenue dans notre café.<br>
+                Que voulez-vous commander ?</p>
+            <p>J'aimerais <span class="highlight">{{ commande }}</span>.</p>
+            <p>Votre <span class="highlight">{{ commande }}</span> sera bientôt prêt.</p>
+        </div>
+
+        <hr>
+
+        <p class="time">⏳ 5 minutes plus tard...</p>
+
+        <hr>
+
+        <div class="dialogue">
+            <p>Votre <span class="highlight">{{ commande }}</span> est prête. Bon appétit !</p>
+            <p>Merci 😋</p>
+        </div>
+    </div>
 </body>
 
 </html>
