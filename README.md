@@ -32,7 +32,7 @@ Projet créé dans le cadre de mon apprentissage du développement Python
 
 ## Note mise à jour :
 
-La description précédente concerne les codes précédents. Entre temps j'ai ajouté Flask et pour avoir une page personnalisé selon votre goût il faut renseigner les données Via l'URL. Suffit de faire : 
+La description précédente concerne les codes précédents. Entre temps j'ai ajouté Flask et pour avoir une page personnalisée il faut renseigner les données Via l'URL en faisant : 
 ?g=VotreGenre&p=VotrePrenom&c=VotreCommande
 
 pour run le projet faites :
