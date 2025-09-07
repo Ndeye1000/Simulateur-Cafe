@@ -30,6 +30,13 @@ Projet créé dans le cadre de mon apprentissage du développement Python
 - Liste les fonctionnalités
 - Professionnel mais accessible
 
-## Note :
+## Note mise à jour :
 
-L'interface est pour bientôt !
+La description précédente concerne les codes précédents. Entre temps j'ai ajouté Flask et pour avoir une page personnalisé selon votre goût il faut renseigner les données Via l'URL. Suffit de faire : 
+?g=VotreGenre&p=VotrePrenom&c=VotreCommande
+
+pour run le projet faites :
+
+```bash
+py app.py
+```
